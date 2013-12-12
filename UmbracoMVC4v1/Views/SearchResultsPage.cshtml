@@ -10,6 +10,7 @@ Welcome to the Search Results Page!!!
 @foreach (var p in Model.SearchProductList)
 {
     <p>
+        <img src="@p.GetPropertyValue("Image").ToString()" />
         <b>@p.Name </b><br />
         @p.GetPropertyValue("Description").ToString()
         @p.GetPropertyValue("Sku").ToString()

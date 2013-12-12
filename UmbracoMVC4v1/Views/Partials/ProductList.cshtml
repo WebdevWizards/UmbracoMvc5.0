@@ -3,6 +3,7 @@
 @foreach (var p in Model.ProductList)
 {
     <p>
+        <img src="@p.GetPropertyValue("Image").ToString()" />
         <b>@p.ProductName </b><br />
         @p.Description <br />
         Sku: @p.Sku

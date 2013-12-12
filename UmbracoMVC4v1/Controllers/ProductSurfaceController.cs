@@ -28,7 +28,8 @@ namespace UmbracoMVC4v1.Controllers
                     Category = p.GetPropertyValue("Category").ToString(), 
                     Price = p.GetPropertyValue("Price").ToString(),
                     Sku = p.GetPropertyValue("Sku").ToString(),
-                    Description = p.GetPropertyValue("Description").ToString()
+                    Description = p.GetPropertyValue("Description").ToString(),
+                    Image = p.GetPropertyValue("Image").ToString()
                 });
             }
            

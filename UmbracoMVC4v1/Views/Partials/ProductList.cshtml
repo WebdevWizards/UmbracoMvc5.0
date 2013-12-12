@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<UmbracoMVC4v1.ViewModels.ProductVM>
+
+@foreach (var p in Model.ProductList)
+{
+    <p>
+        <b>@p.ProductName </b><br />
+        @p.Description <br />
+        Sku: @p.Sku
+        <p style="color: palevioletred;">Price: @p.Price </p><br />
+
+       @*// TODO: Render out a product image here *@
+    </p>
+}
+
+<p>
+    @Html.ActionLink("HomePage", "Index", "Home")
+</p>

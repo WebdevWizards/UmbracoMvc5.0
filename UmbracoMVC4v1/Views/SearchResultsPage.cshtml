@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<UmbracoMVC4v1.ViewModels.SearchViewModel>
+@{
+    Layout = null;
+}
+
+@Html.Partial("header");
+
+Welcome to the Search Results Page!!!  
+
+@foreach (var p in Model.SearchProductList)
+{
+    <p>
+        <b>@p.Name </b><br />
+        @p.GetPropertyValue("Description").ToString()
+        @p.GetPropertyValue("Sku").ToString()
+        @p.GetPropertyValue("Category").ToString()
+        @*@p.Description <br />
+        Sku: @p.Sku*@
+        <p style="color: palevioletred;">@p.GetPropertyValue("Price").ToString()</p><br />
+
+       @*// TODO: Render out a product image here *@
+    </p>
+}
+
+<p>
+    @Html.ActionLink("HomePage", "Index", "Home")
+</p>

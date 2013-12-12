@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<UmbracoMVC4v1.Models.HomeModel>
+@*@inherits Umbraco.Web.UmbracoTemplate*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="search">
+@Html.Partial("SearchPartial", model: new UmbracoMVC4v1.ViewModels.SearchViewModel());
+</div>
+
+
+@*<p>
+    @using (Html.BeginUmbracoForm("Search", "SearchSurface"))
+    {
+        <button type="submit" name="SearchTerm" value="Les">
+            See category ONE
+        </button>
+    }
+</p>*@
+
+@*<p>
+    @using (Html.BeginUmbracoForm("index", "ProductSurface"))
+    {
+        <button type="submit" class="btn btn-small">
+            <i class="icon-off"></i>See all our cool products!
+        </button>
+    }
+</p>*@

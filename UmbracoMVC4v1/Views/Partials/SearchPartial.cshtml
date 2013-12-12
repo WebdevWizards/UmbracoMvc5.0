@@ -1,0 +1,8 @@
+﻿@model UmbracoMVC4v1.ViewModels.SearchViewModel
+
+@using (Html.BeginUmbracoForm("Search", "SearchSurface"))
+    {
+            @*<input type="text" name="s" />*@
+            @Html.EditorFor(x => Model.SearchTerm);
+            <input type="submit" value="Search" />
+    }
